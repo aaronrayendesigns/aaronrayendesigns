@@ -128,6 +128,10 @@ footer img {
         width: 20vw;
     }
 
+    main {
+        padding-top: 15%;
+    }
+
     .skillselemento {
         flex: 48%;
         max-width: 48%;
