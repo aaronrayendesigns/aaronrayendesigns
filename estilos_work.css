@@ -102,9 +102,6 @@ footer img {
 }
 
 @media (max-width: 992px) {
-    nav {
-        background-color: aquamarine;
-    }
     nav img {
         width: 20vw;
     }
