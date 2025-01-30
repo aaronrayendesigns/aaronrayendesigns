@@ -126,6 +126,57 @@ main {
     padding-bottom: 3%;
 }
 
+.clients {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 1%;
+}
+
+.clientselemento {
+    width: 33%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #252422;
+    color: #fffcf2;
+    position: relative;
+}
+
+.clients img {
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #eb5e28;
+}
+
+.clientselemento:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-weight: lighter;
+}
+
 .skills {
     text-align: center;
     margin-top: 5%;
@@ -339,6 +390,22 @@ footer img {
     .workelemento h3 {
         font-size: 1em;
         padding-top: 5%;
+    }
+
+    .clients {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .clientselemento {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .skills img {
