@@ -138,10 +138,6 @@ img {
     white-space: nowrap;
 }
 
-
-
-
-
 footer {
     background-color: #252422;
     color: #fffcf2;
@@ -162,6 +158,10 @@ footer img {
 
     main {
         padding-top: 20%;
+    }
+
+    h1 {
+        font-size: 1em;
     }
 }
 
@@ -207,5 +207,9 @@ footer img {
     .column {
         flex: 100%;
         max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
     }
 }
