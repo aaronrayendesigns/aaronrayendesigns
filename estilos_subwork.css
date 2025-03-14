@@ -20,6 +20,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 2;
 }
 
 nav img {
@@ -81,18 +82,65 @@ img {
 .row {
     display: flex;
     flex-flow: row wrap;
+    overflow: hidden;
 }
 
 .column {
-    flex: 33%;
-    max-width: 33%;
+    flex: 50%;
+    max-width: 50%;
     padding-left: 1%;
 }
 
 .column img {
-    margin-top: 3%;
     vertical-align: middle;
 }
+
+.container {
+    position: relative;
+    color: #fffcf2;
+    background-color: #eb5e28;
+    margin-top: 2%;
+}
+
+.container h1 {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #eb5e28;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+
+
 
 footer {
     background-color: #252422;
