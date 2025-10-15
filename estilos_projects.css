@@ -64,71 +64,69 @@ a:active {
 }
 
 main {
-    padding-top: 10%;
+    padding-top: 8%;
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
 }
 
-main h1 {
-    font-size: 3em;
-    font-weight: bold !important;
-    text-align: center;
-    padding-top: 2%;
-    padding-bottom: 6%;
+.projects {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
 }
 
-.slider {
+.fila5 {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    flex-flow: row nowrap;
 }
 
-/* Cada item del slider */
-.slidecard {
-    flex: 0 0 calc(15% - 1rem);
-    /* 5 elementos en pantalla */
-    display: flex;
-    flex-direction: column;
-    scroll-snap-align: start;
+.projectscard {
+    width: 20%;
     position: relative;
 }
 
-/* Imagen */
-.slidecard img {
-    object-fit: cover;
+.projectscard img {
     width: 100%;
 }
 
-.slider::-webkit-scrollbar {
-    height: 2vh;
+.caption {
+    background-color: #252422;
+    color: #fffcf2;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1rem;
+    height: 8vh;
+    display: grid;
+    place-items: center;
 }
 
-.slider::-webkit-scrollbar-thumb {
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
     background-color: #eb5e28;
 }
 
-.slider::-webkit-scrollbar-track {
-    background: #ccc5b9;
+.projectscard:hover .overlay {
+    opacity: 1;
 }
 
-main h4 {
-    text-align: center;
-    padding-top: 4%;
-    padding-bottom: 2%;
-}
-
-.email {
-    background-color: #eb5e28;
-    margin-bottom: 3%;
-}
-
-.email h5 {
-    text-align: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    color: #252422;
+.text {
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-weight: lighter;
+    font-size: 0.9em;
 }
 
 footer {
@@ -173,13 +171,16 @@ footer {
 }
 
 @media (max-width: 1200px) {
-    main h1 {
+    h1 {
         padding-top: 3%;
-        padding-bottom: 4%;
     }
 
-    .slidecard {
-        flex: 0 0 calc(20% - 1rem);
+    .caption {
+        font-size: 1em;
+    }
+
+    .text {
+        font-size: 0.7em;
     }
 
     footer {
@@ -197,13 +198,12 @@ footer {
         height: 8vh;
     }
 
-    .slidecard {
-        flex: 0 0 calc(25% - 1rem);
+    .caption {
+        font-size: 0.8em;
     }
 
-    main h4 {
-        padding-left: 15%;
-        padding-right: 15%;
+    .text {
+        font-size: 0.6em;
     }
 
     footer {
@@ -243,20 +243,26 @@ footer {
         padding-top: 2%;
     }
 
-    main h1 {
+    h1 {
         padding-top: 6%;
     }
 
-    .slidecard {
-        flex: 0 0 calc(30% - 1rem);
+    .fila5 {
+        display: flex;
+        flex-flow: row wrap;
     }
 
-    main h4 {
-        padding-top: 10%;
+    .projectscard {
+        width: 33%;
+        position: relative;
     }
 
-    .email {
-        margin-bottom: 10%;
+    .caption {
+        font-size: 0.9em;
+    }
+
+    .text {
+        font-size: 0.7em;
     }
 
     footer {
@@ -286,17 +292,26 @@ footer {
         padding-top: 3%;
     }
 
-    main h1 {
+    h1 {
         padding-top: 8%;
-        padding-bottom: 5%;
     }
 
-    .slidecard {
-        flex: 0 0 calc(35% - 1rem);
+    .fila5 {
+        display: flex;
+        flex-flow: row wrap;
     }
 
-    main h4 {
-        padding-bottom: 3%;
+    .projectscard {
+        width: 100%;
+        position: relative;
+    }
+
+    .caption {
+        font-size: 1em;
+    }
+
+    .text {
+        font-size: 1em;
     }
 
     footer h1 {

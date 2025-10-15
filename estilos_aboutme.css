@@ -64,71 +64,142 @@ a:active {
 }
 
 main {
-    padding-top: 10%;
+    padding-top: 8%;
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
 }
 
-main h1 {
-    font-size: 3em;
-    font-weight: bold !important;
-    text-align: center;
-    padding-top: 2%;
-    padding-bottom: 6%;
+.aboutme {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding-bottom: 5%;
 }
 
-.slider {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+.aboutme h2 {
+    padding-bottom: 1%;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 1.3em;
 }
 
-/* Cada item del slider */
-.slidecard {
-    flex: 0 0 calc(15% - 1rem);
-    /* 5 elementos en pantalla */
-    display: flex;
-    flex-direction: column;
-    scroll-snap-align: start;
+.aboutme a:link {
+    color: #252422;
+    text-decoration: none;
+}
+
+.aboutme a:visited {
+    color: #252422;
+    text-decoration: none;
+}
+
+.aboutme a:hover {
+    font-weight: bold;
+    color: #252422 !important;
+    text-decoration: none;
+}
+
+.aboutme a:active {
+    color: #252422;
+    text-decoration: underline;
+}
+
+.destacar {
+    color: #eb5e28;
     position: relative;
+    cursor: pointer;
 }
 
-/* Imagen */
-.slidecard img {
-    object-fit: cover;
+.destacarimg {
+    position: absolute;
+    top: 0;
+    /* debajo del texto */
+    right: 100%;
+    width: 30vw;
+    display: none;
+}
+
+#right {
+    left: 100%;
+}
+
+#top {
+    bottom: 100%;
     width: 100%;
 }
 
-.slider::-webkit-scrollbar {
-    height: 2vh;
+.destacar:hover .destacarimg {
+    display: block;
 }
 
-.slider::-webkit-scrollbar-thumb {
-    background-color: #eb5e28;
+.foto img {
+    width: 100%;
 }
 
-.slider::-webkit-scrollbar-track {
-    background: #ccc5b9;
+.informacion {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top: 5%;
 }
 
-main h4 {
-    text-align: center;
+.informacion img {
+    width: 13%;
+}
+
+.skills {
+    width: 50%;
+}
+
+.herramientas {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.info {
+    width: 50%;
+}
+
+.experiencia {
+    text-align: justify;
+}
+
+.separar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-right: 10%;
+    color: #403d39;
+    font-size: 0.9em;
+}
+
+.separararriba {
     padding-top: 4%;
-    padding-bottom: 2%;
 }
 
-.email {
+.separararriba2 {
+    padding-top: 2%;
+}
+
+.cv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: #252422;
+    color: #fffcf2;
+    padding: 1% 2%;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-download:hover {
     background-color: #eb5e28;
-    margin-bottom: 3%;
-}
-
-.email h5 {
-    text-align: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    color: #252422;
 }
 
 footer {
@@ -173,13 +244,21 @@ footer {
 }
 
 @media (max-width: 1200px) {
-    main h1 {
+    .aboutme h2 {
+        font-size: 1.4em;
         padding-top: 3%;
-        padding-bottom: 4%;
     }
 
-    .slidecard {
-        flex: 0 0 calc(20% - 1rem);
+    .experiencia {
+        font-size: 0.9em;
+    }
+
+    .destacar {
+        color: #252422;
+    }
+
+    .destacar:hover .destacarimg {
+        display: none;
     }
 
     footer {
@@ -197,13 +276,33 @@ footer {
         height: 8vh;
     }
 
-    .slidecard {
-        flex: 0 0 calc(25% - 1rem);
+    .aboutme h2 {
+        font-size: 1.1em;
+        padding-top: 4%;
     }
 
-    main h4 {
-        padding-left: 15%;
-        padding-right: 15%;
+    .informacion img {
+        width: 18%;
+    }
+
+    .informacion h3 {
+        font-size: 1.4em;
+    }
+
+    .informacion h5 {
+        font-size: 1em;
+    }
+
+    .informacion p {
+        font-size: 0.8em;
+    }
+
+    .cv {
+        font-size: 0.9em;
+    }
+
+    .cv a {
+        padding: 2% 3%;
     }
 
     footer {
@@ -243,20 +342,34 @@ footer {
         padding-top: 2%;
     }
 
-    main h1 {
-        padding-top: 6%;
+    .aboutme h2 {
+        font-size: 1.4em;
+        padding-top: 8%;
     }
 
-    .slidecard {
-        flex: 0 0 calc(30% - 1rem);
+    .informacion {
+        display: flex;
+        flex-flow: column nowrap;
     }
 
-    main h4 {
-        padding-top: 10%;
+    .skills {
+        width: 100%;
     }
 
-    .email {
-        margin-bottom: 10%;
+    .info {
+        width: 100%;
+    }
+
+    .informacion h3 {
+        font-size: 1.5em;
+    }
+
+    .informacion h5 {
+        font-size: 1em;
+    }
+
+    .informacion p {
+        font-size: 0.9em;
     }
 
     footer {
@@ -284,19 +397,6 @@ footer {
 
     nav ul {
         padding-top: 3%;
-    }
-
-    main h1 {
-        padding-top: 8%;
-        padding-bottom: 5%;
-    }
-
-    .slidecard {
-        flex: 0 0 calc(35% - 1rem);
-    }
-
-    main h4 {
-        padding-bottom: 3%;
     }
 
     footer h1 {
