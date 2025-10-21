@@ -306,7 +306,11 @@ footer {
     }
 
     h1 {
-        padding-top: 8%;
+        padding-top: 9%;
+    }
+
+    .explicacion p {
+        text-align: left;
     }
 
     footer h1 {

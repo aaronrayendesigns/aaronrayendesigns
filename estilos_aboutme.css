@@ -278,7 +278,8 @@ footer {
 
     .aboutme h2 {
         font-size: 1.1em;
-        padding-top: 4%;
+        padding-top: 6%;
+        text-align: left;
     }
 
     .informacion img {
@@ -295,6 +296,10 @@ footer {
 
     .informacion p {
         font-size: 0.8em;
+    }
+
+    .experiencia {
+        text-align: left;
     }
 
     .cv {

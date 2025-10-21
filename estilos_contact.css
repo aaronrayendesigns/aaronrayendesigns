@@ -197,13 +197,24 @@ footer {
         height: 8vh;
     }
 
+    main h1 {
+        padding-top: 6%;
+        padding-bottom: 6%;
+    }
+
     .slidecard {
-        flex: 0 0 calc(25% - 1rem);
+        flex: 0 0 calc(30% - 1rem);
     }
 
     main h4 {
         padding-left: 15%;
         padding-right: 15%;
+        padding-top: 8%;
+        padding-bottom: 5%;
+    }
+
+    .email {
+        margin-bottom: 6%;
     }
 
     footer {
@@ -243,14 +254,6 @@ footer {
         padding-top: 2%;
     }
 
-    main h1 {
-        padding-top: 6%;
-    }
-
-    .slidecard {
-        flex: 0 0 calc(30% - 1rem);
-    }
-
     main h4 {
         padding-top: 10%;
     }
@@ -287,8 +290,8 @@ footer {
     }
 
     main h1 {
-        padding-top: 8%;
-        padding-bottom: 5%;
+        padding-top: 9%;
+        padding-bottom: 7%;
     }
 
     .slidecard {
@@ -297,6 +300,12 @@ footer {
 
     main h4 {
         padding-bottom: 3%;
+        font-size: 1em;
+    }
+
+    .email h5 {
+        padding-top: 2%;
+        padding-bottom: 2%;
     }
 
     footer h1 {
